@@ -1,45 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="index.css">
+
 </head>
 <body>
     <div class= "container">
         <aside>
             <div class="upperAside">
                 <input type="checkbox" id="home" name="home" checked>
-                <label for="home">Home</label>
+                <label for="home">Home</label><br>
                 <input type="checkbox" id="myFiles" name="myFiles">
-                <label for="myFiles">My Files</label> 
+                <label for="myFiles">My Files</label> <br>
                 <input type="checkbox" id="recentFiles" name="recentFiles">
-                <label for="recentFiles">Recent Files</label> 
+                <label for="recentFiles">Recent Files</label><br> 
                 <input type="checkbox" id="sharedFiles" name="sharedFiles">
-                <label for="sharedFiles">Shared Files</label>  
+                <label for="sharedFiles">Shared Files</label><br>  
                 <input type="checkbox" id="fileRequest" name="fileRequest">
-                <label for="fileRequest">File Request</label> 
+                <label for="fileRequest">File Request</label><br> 
                 <input type="checkbox" id="trash" name="trash" >
-                <label for="trash">Trash</label> 
+                <label for="trash">Trash</label>
             </div>
             <div class="bottomAside">
                 <input type="checkbox" id="uploadFiles" name="uploadFiles">
-                <label for="uploadFiles">Upload Files</label> 
+                <label for="uploadFiles">Upload Files</label> <br>
                 <input type="checkbox" id="uploadFolder" name="uploadFolder">
-                <label for="uploadFolder">Upload Folder</label>  
+                <label for="uploadFolder">Upload Folder</label><br>  
                 <input type="checkbox" id="newFolder" name="newFolder">
-                <label for="newFolder">New Folder</label> 
+                <label for="newFolder">New Folder</label><br> 
                 <input type="checkbox" id="more" name="more" >
                 <label for="more">More</label>
             </div>
             <div>Create new
                 <button>+</button>
             </div>
-            
-            
         </aside>
+
+
         <div class = "main">
             <input type="search" id="search" name="search">
             <!-- RECENTLY USED -->
@@ -111,53 +115,55 @@
         </div>
 
         <!-- ANOTHER SIDE JJJ-->
-        <div class="userInfo">
-            NAME
+        <div class="anotherSide">
+            <div class="userInfo">
+                NAME
+            </div>
+            <p class=title>Storage</p>
+            <div>
+                85 % Used
+            </div>
+            <p>420.2 GB of 500 GB used</p>
+            <div class="filesResume">
+                <div>
+                    <p>Documents</p><!--can have same class as titileProject and dateProject-->
+                    <p>720 files</p>
+                </div>
+                <div>
+                    <p>200 GB</p>
+                </div>
+                <div>
+                    <p>Documents</p><!--can have same class as titileProject and dateProject-->
+                    <p>720 files</p>
+                </div>
+                <div>
+                    <p>125 GB</p>
+                </div>
+                <div>
+                    <p>Documents</p><!--can have same class as titileProject and dateProject-->
+                    <p>720 files</p>
+                </div>
+                <div>
+                    <p>75 GB</p>
+                </div>
+                <div>
+                    <p>Documents</p><!--can have same class as titileProject and dateProject-->
+                    <p>720 files</p>
+                </div>
+                <div>
+                    <p>50 GB</p>
+                </div>
+            </div>
+            <div class="colorDistorcion">
+                <div>
+                    cuadrado de color
+                </div>
+                <p>Buy more space now!</p><!--can have same class as titileProject and dateProject-->
+                <p>Upgrade to cloud premium</p>
+                <button>Upgrade Account</button>
+            </div>
         </div>
-        <p class=title>Storage</p>
-        <div>
-            85 % Used
-        </div>
-        <p>420.2 GB of 500 GB used</p>
-        <div class="filesResume">
-            <div>
-                <p>Documents</p><!--can have same class as titileProject and dateProject-->
-                <p>720 files</p>
-            </div>
-            <div>
-                <p>200 GB</p>
-            </div>
-            <div>
-                <p>Documents</p><!--can have same class as titileProject and dateProject-->
-                <p>720 files</p>
-            </div>
-            <div>
-                <p>125 GB</p>
-            </div>
-            <div>
-                <p>Documents</p><!--can have same class as titileProject and dateProject-->
-                <p>720 files</p>
-            </div>
-            <div>
-                <p>75 GB</p>
-            </div>
-            <div>
-                <p>Documents</p><!--can have same class as titileProject and dateProject-->
-                <p>720 files</p>
-            </div>
-            <div>
-                <p>50 GB</p>
-            </div>
-        </div>
-        <div class="colorDistorcion">
-            <div>
-                cuadrado de color
-            </div>
-            <p>Buy more space now!</p><!--can have same class as titileProject and dateProject-->
-            <p>Upgrade to cloud premium</p>
-            <button>Upgrade Account</button>
-        </div>
-
+        
     </div>
     
 </body>
