@@ -11,11 +11,12 @@ html {
 :root {
     --main-bg-color: #FFFFFF;
     --secondary-color: #F5F6FC;
-    --aside-color: #343951;
+    --text-color: #343951;
     --aside-second-color:#464C61;
     --aside-third-color: #BEC0C8;
     --button-color:#FF9F00;
     --button-secondary-color: #FFB233;
+    --input-text-color: #BCBECA;
     --menu-font-color: #858A9D;
     --gap: 19px;
     --aside-font-size: 10px;
@@ -26,6 +27,9 @@ html {
     --box-width : 116px;
     --box-height : 111px;
     --btn-height: 3em;
+    --mosaics--width: 159px;
+    --mosaics-height: 133px;
+    --miniMosaic-height: 79px;
 }
 
 body {
@@ -38,11 +42,12 @@ body {
     display: grid;
     grid-template-columns: 15% 50% 35%;
 }
+/*---------ASIDE---------------*/
 aside{
     display: grid;
     grid-template-rows: 10% 42% 25% 18% 5%;
     grid-column: 1/2;
-    background-color: var(--aside-color);
+    background-color: var(--text-color);
     margin-right: var(--gap);
     font-size: var(--aside-font-size);
 }
@@ -87,15 +92,74 @@ label input {
     grid-row: 5/6 ;
     border-radius: 5%;
 }
+/*-----------MAIN--------*/
 .main{
+    display: grid;
     grid-column: 2/3;
     background-color: var(--secondary-color);
     margin-right: var(--gap);
+    padding: 25px 16px;
 }
+.searchInput {
+    padding : 10px;
+    border:0;
+    border-radius: 5%;
+    color: var(--input-text-color);
+}
+.title {
+    font-size: var(--title-font-size);
+    color: var(--text-color);
+}
+.mosaics {
+    display: flex;
+    justify-content: space-around;
+}
+.mosaic {
+    flex: 0 0 var(--mosaics--width);
+    height: var(--mosaics-height);
+    background-color: var(--main-bg-color);
+    border-radius: 12%;
+    padding: 14px;
+}
+.miniMosaic {
+    flex: 0 0 var(--mosaics--width);
+    height: var(--miniMosaic-height);
+    background-color: var(--main-bg-color);
+    border-radius: 12%;
+    padding: 14px;
+}
+.titleProject {
+    font-size: var(--subtitle-font-size);
+    margin:0px;
+}
+.dateProject {
+    font-size: var(--descrition-font-size);
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0 16px;
+}
+th{
+    font-size: var(--subtitle-font-size);
+    color: var(--menu-font-color);
+    text-align: left;
+    font-weight: normal;
+    background-color: var(--secondary-color);
+}
+tr{
+    background-color: var(--main-bg-color);
+    height: 42px;
+    font-size: var(--subtitle-font-size);
+    border-radius: 12px;
+}
+
+
+/*---ANOTHER SIDE*/
 .anotherSide {
     grid-column: 3/4;
     background-color: #F5F6FC;
 }
+
 
 /*general elements*/
 button{
@@ -108,4 +172,8 @@ button{
     color: var(--main-bg-color);
     size: var(--aside-font-size);
     font-weight: bold;
+}
+span {
+    float: right;
+    font-size: var(--subtitle-font-size);
 }
