@@ -25,6 +25,7 @@ html {
     --descrition-font-size: 8px;
     --box-width : 116px;
     --box-height : 111px;
+    --btn-height: 3em;
 }
 
 body {
@@ -69,7 +70,7 @@ label input {
     width: var(--box-width);
     height: var(--box-height);
     background-color: var(--aside-second-color);
-    margin: 5px 28px;
+    margin: 5px 25px;
     padding: 15px 10px;
     justify-self: center;
     border-radius: 5%;
@@ -77,22 +78,15 @@ label input {
 }
 .createBtn {
     display: flex;
-    justify-content: space-evenly;
-    align-content: center;
+    justify-content: space-around;
     width: var(--box-width);
-    height: 3em;
+    height: var(--btn-height);
     margin-left: 28px;
     background-color: var(--button-color);
     color: var(--main-bg-color);
     grid-row: 5/6 ;
-    padding: 7px ;
     border-radius: 5%;
 }
-button{
-    border: none;
-    color: var(--main-bg-color);
-}
-
 .main{
     grid-column: 2/3;
     background-color: var(--secondary-color);
@@ -103,7 +97,15 @@ button{
     background-color: #F5F6FC;
 }
 
-/*general clasess*/
+/*general elements*/
 button{
+    align-self: center;
+    width: 21px;
+    height: 21px;
     background-color: var(--button-secondary-color);
+    border: none;
+    border-radius: 5%;
+    color: var(--main-bg-color);
+    size: var(--aside-font-size);
+    font-weight: bold;
 }
