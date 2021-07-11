@@ -13,7 +13,9 @@ html {
     --secondary-color: #F5F6FC;
     --aside-color: #343951;
     --aside-second-color:#464C61;
+    --aside-third-color: #BEC0C8;
     --button-color:#FF9F00;
+    --button-secondary-color: #FFB233;
     --menu-font-color: #858A9D;
     --gap: 19px;
     --aside-font-size: 10px;
@@ -21,6 +23,8 @@ html {
     --subtitle-font-size: 12px;
     --medium-font-size: 14px;
     --descrition-font-size: 8px;
+    --box-width : 116px;
+    --box-height : 111px;
 }
 
 body {
@@ -35,24 +39,58 @@ body {
 }
 aside{
     display: grid;
-    grid-template-rows: 52% 48% ;
+    grid-template-rows: 10% 42% 25% 18% 5%;
     grid-column: 1/2;
     background-color: var(--aside-color);
     margin-right: var(--gap);
     font-size: var(--aside-font-size);
 }
-.upperAside {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.image1{
     grid-row: 1/2;
-    margin-left: 32px;
+    width:74px;
+    height:21px;
+    justify-self:  center;
+    align-self: center;
+    background-color: orange;
+}
+.upperAside {
+    display: grid;
+    grid-row: 2/3;
     color: var(--menu-font-color);
+    border-bottom: 1px solid var(--menu-font-color);
+}
+label input {
+    margin-left: 32px;
+    margin-right: 19px;
 }
 
 .bottomAside{
+    grid-row: 4/5;
+    width: var(--box-width);
+    height: var(--box-height);
     background-color: var(--aside-second-color);
+    margin: 5px 28px;
+    padding: 15px 10px;
+    justify-self: center;
+    border-radius: 5%;
+    color: var(--aside-third-color);
+}
+.createBtn {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    width: var(--box-width);
+    height: 3em;
     margin-left: 28px;
+    background-color: var(--button-color);
+    color: var(--main-bg-color);
+    grid-row: 5/6 ;
+    padding: 7px ;
+    border-radius: 5%;
+}
+button{
+    border: none;
+    color: var(--main-bg-color);
 }
 
 .main{
@@ -67,5 +105,5 @@ aside{
 
 /*general clasess*/
 button{
-    background-color: var(--button-color);
+    background-color: var(--button-secondary-color);
 }
