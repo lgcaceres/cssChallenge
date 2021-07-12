@@ -20,6 +20,10 @@ html {
     --menu-font-color: #858A9D;
     --border-color:#E0E7F1;
     --icons-bg-color: #C4C4C4;
+    --first-color-donut:#4AC29D;
+    --second-color-donut:#FF9F00;
+    --third-color-donut:#BCBECA;
+    --fourth-color-donut:#689FF8;
     --gap: 19px;
     --aside-font-size: 10px;
     --title-font-size: 20px;
@@ -159,6 +163,9 @@ label input {
     font-size: var(--descrition-font-size);
     color: var(--menu-font-color);
 }
+.dateProject.middle {
+    text-align: center;
+}
 table {
     border-collapse: separate;
     border-spacing: 0 16px;
@@ -233,6 +240,7 @@ tr{
 }
 .subtitle {
     font-size: var(--aside-font-size);
+    float: none;
 }
 .gigasBox {
     display: flex;
@@ -280,4 +288,112 @@ button{
 span {
     float: right;
     font-size: var(--subtitle-font-size);
+}
+span.center {
+    float:none;
+}
+/*DONUT*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;  
+}
+  
+.donut-chart {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 2rem;
+  border-radius: 100%
+ }
+p.center {
+  background: var(--main-bg-color);
+  position: absolute;
+  text-align: center;
+  font-size: 24px;
+  font-weight: normal;
+  top:0;left:0;bottom:0;right:0;
+  width: 115px;
+  height: 115px;
+  margin: auto;
+  border-radius: 50%;
+  line-height: 30px;
+  padding: 15% 0 0;
+}
+.subtitle.donut {
+    font-size: 14px;
+    color: #858A9D;
+    line-height: 16px;
+}
+    
+    
+.portion-block {
+    border-radius: 50%;
+    clip: rect(0px, 160px, 160px, 80px);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+.circle {
+    border-radius: 50%;
+    clip: rect(0px, 80px, 160px, 0px);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+    
+    
+#part1 {
+    transform: rotate(0deg);
+  }
+
+    #part1 .circle {
+        background-color: var(--first-color-donut);
+        /*transform: rotate(76deg);*/
+        animation: first 1s 1 forwards;
+      }
+    
+    
+#part2 {
+    transform: rotate(40deg);
+  }
+    #part2 .circle {
+        background-color: var(--second-color-donut);
+        animation: second 1s 1 forwards 1s;
+    }
+#part3 {
+    transform: rotate(190deg);
+}
+    #part3 .circle {
+        background-color: var(--third-color-donut);
+        animation: third 1s 1 forwards 2s;
+    }
+#part4 {
+    transform: rotate(270deg);
+}
+    #part4 .circle {
+        background-color: var(--fourth-color-donut);
+        animation: fourth 1s 1 forwards 3s;
+    }
+    
+    
+/* Animation */
+@keyframes first {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(40deg);}
+}
+    
+@keyframes second {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(150deg);}
+}
+    
+@keyframes third {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(80deg);}
+}
+@keyframes fourth {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(90deg);}
 }
