@@ -39,12 +39,14 @@ html {
     --height-gigas:21px;
     --mosaics--width: 159px;
     --mosaics-height: 133px;
-    --miniMosaic-height: 79px;
+    --miniMosaic-height: 90px;
     --width-small-gradient: 74px;
     --height-small-gradient:21px;
     --file-color-size: 28px;
     --user-item-size: 15px;
     --user-icon-size: 31px;
+    --squares-size: 28px;
+    --circle-size: 18px;
 }
 
 body {
@@ -55,7 +57,7 @@ body {
     background-color:var(--main-bg-color);
     height: 768px;
     display: grid;
-    grid-template-columns: 16% 54% 30%;
+    grid-template-columns: 16% 60% 24%;
 }
 /*---------ASIDE---------------*/
 aside{
@@ -141,7 +143,40 @@ label input {
     display: flex;
     justify-content: space-around;
 }
+.optionsMosaic {
+    display: grid;
+    grid-template-columns: 5% 35% 10% 40% 10%;
+    grid-template-rows: 7% 20% 10%;
+}
+.squares {
+    grid-row: 1/3;
+    width: var(--squares-size);
+    height: var(--squares-size);
+    background-color: var(--button-color);
+}
+.dots {
+    grid-column: 5/6;
+    color: var(--icons-bg-color);
+}
+.squares.light {
+    background: #FFD999;
+    grid-row: 2/3;
+}
+.rings {
+    width: var(--circle-size);
+    height: var(--circle-size);
+    background: var(--main-bg-color);
+    border-radius: 50%;
+    border: 1px solid var(--menu-font-color) ;    
+    grid-row: 3/4;
+    grid-column: 3/4;
+}
+.rings.second {
+    grid-column: 4/5;
+}
 .mosaic {
+    display: grid;
+    grid-template-rows: 50% 25% 25% ;
     flex: 0 0 var(--mosaics--width);
     height: var(--mosaics-height);
     background-color: var(--main-bg-color);
@@ -154,6 +189,23 @@ label input {
     background-color: var(--main-bg-color);
     border-radius: 12%;
     padding: 14px;
+}
+.optionsMiniMosaic {
+    display: grid;
+    grid-template-columns: 65% 7% 10%;
+    align-items: center;
+}
+.ringColor {
+    width: var(--circle-size);
+    height: var(--circle-size);
+    border-radius: 50%;
+    background: var(--main-bg-color)
+}
+.ringColor.green {
+    border: 1px solid #4AC29D;
+}
+.ringColor.red {
+    border: 1px solid #FF6860
 }
 .titleProject {
     font-size: var(--subtitle-font-size);
@@ -170,6 +222,9 @@ table {
     border-collapse: separate;
     border-spacing: 0 16px;
 }
+.fileName {
+    color: var(--text-color);
+}
 th{
     font-size: var(--subtitle-font-size);
     color: var(--menu-font-color);
@@ -182,6 +237,7 @@ tr{
     height: 42px;
     font-size: var(--subtitle-font-size);
     border-radius: 12px;
+    color: var(--menu-font-color);
 }
 
 
@@ -196,7 +252,7 @@ tr{
 .userInfo {
     display: grid;
     align-items: center;
-    grid-template-columns: 10% 10% 40% 20% 20%;
+    grid-template-columns: 10% 10% 35% 25% 20%;
     grid-row: 1/2;
     border-bottom: 1px solid var(--border-color);
 }
@@ -207,6 +263,10 @@ tr{
 }
 .userItem.border {
     border: 1px solid #9D9FAF;
+    background-color: #F5F6FC;
+}
+.userItem.borderblack {
+    border: 1px solid black;
     background-color: #F5F6FC;
 }
 .name {
@@ -288,6 +348,8 @@ button{
 span {
     float: right;
     font-size: var(--subtitle-font-size);
+    color: inherit;
+    
 }
 span.center {
     float:none;
@@ -306,10 +368,11 @@ span.center {
   margin: 0 auto 2rem;
   border-radius: 100%
  }
-p.center {
+div.center {
   background: var(--main-bg-color);
   position: absolute;
   text-align: center;
+  vertical-align: middle;
   font-size: 24px;
   font-weight: normal;
   top:0;left:0;bottom:0;right:0;
@@ -317,13 +380,13 @@ p.center {
   height: 115px;
   margin: auto;
   border-radius: 50%;
-  line-height: 30px;
+  line-height: 60px;
   padding: 15% 0 0;
 }
 .subtitle.donut {
     font-size: 14px;
     color: #858A9D;
-    line-height: 16px;
+    line-height: 10px;
 }
     
     
