@@ -18,6 +18,7 @@ html {
     --button-secondary-color: #FFB233;
     --input-text-color: #BCBECA;
     --menu-font-color: #858A9D;
+    --border-color:#E0E7F1;
     --gap: 19px;
     --aside-font-size: 10px;
     --title-font-size: 20px;
@@ -27,6 +28,10 @@ html {
     --box-width : 116px;
     --box-height : 111px;
     --btn-height: 3em;
+    --big-box-with: 194px;
+    --big-box-height:202px;
+    --width-gigas:54px;
+    --height-gigas:21px;
     --mosaics--width: 159px;
     --mosaics-height: 133px;
     --miniMosaic-height: 79px;
@@ -40,7 +45,7 @@ body {
     background-color:var(--main-bg-color);
     height: 768px;
     display: grid;
-    grid-template-columns: 15% 50% 35%;
+    grid-template-columns: 16% 54% 30%;
 }
 /*---------ASIDE---------------*/
 aside{
@@ -90,7 +95,7 @@ label input {
     background-color: var(--button-color);
     color: var(--main-bg-color);
     grid-row: 5/6 ;
-    border-radius: 5%;
+    border-radius: 7px;
 }
 /*-----------MAIN--------*/
 .main{
@@ -134,6 +139,7 @@ label input {
 }
 .dateProject {
     font-size: var(--descrition-font-size);
+    color: var(--menu-font-color);
 }
 table {
     border-collapse: separate;
@@ -156,11 +162,57 @@ tr{
 
 /*---ANOTHER SIDE*/
 .anotherSide {
+    display: grid;
+    grid-template-rows: 10% 32% 30% 28%;
     grid-column: 3/4;
     background-color: #F5F6FC;
+    padding: 20px 33px;
 }
+.userInfo {
+    grid-row: 1/2;
+    border-bottom: 1px solid var(--border-color);
+}
+.storageGraphic {
+    grid-row: 2/3;
 
-
+}
+.filesResume {
+    grid-row: 3/4;
+}
+.fileItem{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 60% 40%;
+    border-bottom: 1px solid var(--border-color);
+}
+.subtitle {
+    font-size: var(--aside-font-size);
+}
+.gigasBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    font-size: var(--descrition-font-size);
+    font-weight: 500;
+    width: var(--width-gigas);
+    height: var(--height-gigas);
+    background-color: var(--main-bg-color);
+    border-radius: 4px;
+    text-align: center;
+    justify-content: center;
+}
+.colorDistortion{
+    display: grid;
+    grid-template-rows: 50% 10% 10% 30%;
+    justify-items: center;
+    grid-row: 4/5;
+    width: var(--big-box-with);
+    height: var(--big-box-height);
+    background-color: var(--main-bg-color);
+    place-self: center;
+    border-radius: 18px;
+}
 /*general elements*/
 button{
     align-self: center;
@@ -172,6 +224,12 @@ button{
     color: var(--main-bg-color);
     size: var(--aside-font-size);
     font-weight: bold;
+}
+.bigButton {
+    width: var(--box-width);
+    height: var(--btn-height);
+    border-radius: 7%;
+    font-size: var(--aside-font-size);
 }
 span {
     float: right;
