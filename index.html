@@ -14,8 +14,7 @@
 <body>
     <div class= "container">
         <aside>
-            <div class="image1">
-                IMAGE 1
+            <div class="gradient">
             </div>
             <div class="upperAside">
                 <label for="home"><input type="checkbox" id="home" name="home" checked>Home</label><br>
@@ -45,7 +44,12 @@
         <div class = "main">
             <input class="searchInput" type="search" id="search" name="search" placeholder="Search">
             <!-- RECENTLY USED -->
-            <p class=title>Recently Used <span> cuadrados</span></p>
+            <div class="mainMenu">
+                <div class=title>Recently Used</div>
+                <div class="userItem border"></div>
+                <div class="userItem border"></div>    
+            </div>
+
             <div class="mosaics">
                 <div class="mosaic">
                     <p class="titleProject">App Project</p>
@@ -64,30 +68,35 @@
             <p class=title>Recent Files <span> View All</span></p>
             <table>
                 <tr>
-                    <th scope="col">Name</th>
+                    <th scope="col">Name </th>
+                    <th scope="col"></th>
                     <th scope="col">Members</th>
                     <th scope="col">Last Modified</th>
                     <th scope="col"> </th>
                 </tr>
                 <tr>
+                    <td> <div class="fileColor"></div></td>
                     <td>Travel Landing Page</th>
                     <td>5 members</td>
                     <td>Mar 8, 2020</td>
                     <td>...</td>
                 </tr>
                 <tr>
+                    <td> <div class="fileColor"></div></td>
                     <td>True Photos</th>
                     <td>12 members</td>
                     <td>Mar 8, 2020</td>
                     <td>...</td>
                 </tr>
                 <tr>
+                    <td> <div class="fileColor"></div></td>
                     <td>Dashboard Structure</th>
                     <td>10 members</td>
                     <td>Mar 9, 2020</td>
                     <td>...</td>
                 </tr>
                 <tr>
+                    <td> <div class="fileColor"></div></td>
                     <td>Character Ilustration</th>
                     <td>3 members</td>
                     <td>Mar 10, 2020</td>
@@ -113,9 +122,12 @@
         </div>
 
         <!-- ANOTHER SIDE JJJ-->
-        <div class="anotherSide">
+        <div class="storageSide">
             <div class="userInfo">
-                Name
+                <div class="userItem"></div>
+                <div class="userItem"></div>
+                <div class="name">Name</div>
+                <div class="userIcon"></div>
             </div>
             <div class="storageGraphic">
                 <p class=title>Storage</p>
@@ -124,6 +136,7 @@
             </div>
             <div class="filesResume">
                 <div class="fileItem">
+                    <div class="fileColor"></div>
                     <div>
                         <p class="subtitle">Documents</p>
                         <p class="dateProject">720 files</p>
@@ -133,6 +146,7 @@
                     </div>
                 </div>
                 <div class="fileItem">
+                    <div class="fileColor"></div>
                     <div>
                         <p class="subtitle">Documents</p>
                         <p class="dateProject">720 files</p>
@@ -142,6 +156,7 @@
                     </div>
                 </div>
                 <div class="fileItem">
+                    <div class="fileColor"></div>
                     <div>
                         <p class="subtitle">Documents</p>
                         <p class="dateProject">720 files</p>
@@ -151,6 +166,7 @@
                     </div>
                 </div>
                 <div class="fileItem">
+                    <div class="fileColor"></div>
                     <div>
                         <p class="subtitle">Documents</p>
                         <p class="dateProject">720 files</p>
@@ -161,8 +177,7 @@
                 </div>
             </div>
             <div class="colorDistortion">
-                <div>
-                    cuadrado de color
+                <div class="gradient big">
                 </div>
                 <p class="titleProject">Buy more space now!</p><!--can have same class as titileProject and dateProject-->
                 <p class="dateProject">Upgrade to cloud premium</p>

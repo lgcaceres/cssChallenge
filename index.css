@@ -19,6 +19,7 @@ html {
     --input-text-color: #BCBECA;
     --menu-font-color: #858A9D;
     --border-color:#E0E7F1;
+    --icons-bg-color: #C4C4C4;
     --gap: 19px;
     --aside-font-size: 10px;
     --title-font-size: 20px;
@@ -35,6 +36,11 @@ html {
     --mosaics--width: 159px;
     --mosaics-height: 133px;
     --miniMosaic-height: 79px;
+    --width-small-gradient: 74px;
+    --height-small-gradient:21px;
+    --file-color-size: 28px;
+    --user-item-size: 15px;
+    --user-icon-size: 31px;
 }
 
 body {
@@ -56,13 +62,18 @@ aside{
     margin-right: var(--gap);
     font-size: var(--aside-font-size);
 }
-.image1{
+.gradient{
     grid-row: 1/2;
-    width:74px;
-    height:21px;
+    width:var(--width-small-gradient);
+    height:var(--height-small-gradient);
+    border-radius: 5px;
     justify-self:  center;
     align-self: center;
-    background-color: orange;
+    background: linear-gradient(270deg, #689EF8 0%,#FF6860 56.25%, #FF9F00 100%);
+}
+.gradient.big{
+    height: 73px;
+    width: 119px;
 }
 .upperAside {
     display: grid;
@@ -89,6 +100,7 @@ label input {
 .createBtn {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: var(--box-width);
     height: var(--btn-height);
     margin-left: 28px;
@@ -110,6 +122,12 @@ label input {
     border:0;
     border-radius: 5%;
     color: var(--input-text-color);
+}
+.mainMenu {
+    display: grid;
+    grid-template-columns: 92% 4% 4%;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 .title {
     font-size: var(--title-font-size);
@@ -160,17 +178,38 @@ tr{
 }
 
 
-/*---ANOTHER SIDE*/
-.anotherSide {
+/*---STORAGE SIDE*/
+.storageSide {
     display: grid;
     grid-template-rows: 10% 32% 30% 28%;
     grid-column: 3/4;
-    background-color: #F5F6FC;
+    background-color:var(--secondary-color);
     padding: 20px 33px;
 }
 .userInfo {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 10% 10% 40% 20% 20%;
     grid-row: 1/2;
     border-bottom: 1px solid var(--border-color);
+}
+.userItem {
+    width: var(--user-item-size);
+    height: var(--user-item-size);
+    background-color: var(--icons-bg-color);
+}
+.userItem.border {
+    border: 1px solid #9D9FAF;
+    background-color: #F5F6FC;
+}
+.name {
+    grid-column: 4/5;
+}
+.userIcon {
+    width: var(--user-icon-size);
+    height: var(--user-icon-size);
+    background-color: var(--icons-bg-color);
+    border-radius: 50%;
 }
 .storageGraphic {
     grid-row: 2/3;
@@ -182,8 +221,15 @@ tr{
 .fileItem{
     display: grid;
     align-items: center;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 15% 35% 40%;
     border-bottom: 1px solid var(--border-color);
+}
+.fileColor {
+    width: var(--file-color-size);
+    height: var(--file-color-size);
+    border-radius: 8px;
+    background-color: #FF9F00;
+    margin-left: 5px;
 }
 .subtitle {
     font-size: var(--aside-font-size);
